@@ -117,7 +117,7 @@ int main(int argc, char** argv) {
 	Sphere *f;
 	Torus *tr;
 	Vector3D v;
-
+	cout << v << endl;
 	c = new Cube();
 
 	c->setPos(Vector3D(0,1,0));

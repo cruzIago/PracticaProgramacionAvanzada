@@ -30,3 +30,5 @@ Vector3D Vector3D::operator/(double d) {
 	vuelta.z = z / d;
 	return vuelta;
 }
+
+

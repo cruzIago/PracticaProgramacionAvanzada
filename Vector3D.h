@@ -1,5 +1,8 @@
 #ifndef _VECTOR3D_H_
 #define _VECTOR3D_H_
+#include <iostream>
+
+using namespace std;
 
 class Vector3D {
 private:
@@ -34,6 +37,13 @@ public:
 	Vector3D operator*(double f);
 	Vector3D operator-(Vector3D v2);
 	Vector3D operator/(double f);
+
+	friend ostream &operator<<(ostream &os, const Vector3D &v);
 };
+
+inline ostream &operator<<(ostream &os, const Vector3D &v) {
+	os << v.x << "," << v.y << "," << v.z;
+	return os;
+}
 
 #endif

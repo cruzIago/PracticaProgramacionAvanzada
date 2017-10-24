@@ -46,6 +46,18 @@ public:
 		return mas;
 	}
 
+	virtual void render() = 0;//Esto obliga a los hijos a hacer un metodo render en los hijos
+
 	void update(double dt);
 
+	friend ostream &operator<<(ostream &os, const Solid &s);
 };
+
+inline ostream &operator<<(ostream &os, const Solid &s) {
+	os << "pos=" << s.pos << endl;
+	os << "vel=" << s.vel << endl;
+	os << "col=" << s.col << endl;
+	os << "fur=" << s.fur << endl;
+	os << "mas=" << s.mas << endl;
+	return os;
+}

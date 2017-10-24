@@ -6,6 +6,7 @@
 using namespace std;
 
 
+
 void Solid::update(double dt) {
 
 	Vector3D g(0, -0.00098f, 0);

@@ -10,9 +10,6 @@ using namespace std;
 
 class Scene {
 private:
-	vector<Cube*>cubes;
-	vector<Sphere*>spheres;
-	vector<Torus*> torus;
 	vector<Solid*> solids;
 public:
 
@@ -24,9 +21,8 @@ public:
 		solids = s;
 	}
 
-
-	void add(Torus* e) {
-		torus.push_back(e);
+	void add(Solid* s) {
+		solids.push_back(s);
 	}
 
 	void render() {

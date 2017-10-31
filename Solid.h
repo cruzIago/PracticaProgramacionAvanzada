@@ -18,7 +18,8 @@ public:
 		fur (s.fur),
 		mas(s.mas)
 	{}
-	//virtual Solid();
+	//virtual ~Solid(); //Se llama automaticamente cuando una variable deja de ser necesaria (virtual ~ss)
+	virtual Solid *clone() = 0;
 	void setPos(Vector3D p) {
 		pos = p;
 	}
@@ -71,3 +72,4 @@ inline ostream &operator<<(ostream &os, const Solid &s) {
 	os << "mas=" << s.mas << endl;
 	return os;
 }
+

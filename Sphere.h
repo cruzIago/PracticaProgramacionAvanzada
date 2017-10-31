@@ -13,6 +13,10 @@ public:
 		Solid(e),
 		r(e.r)
 	{}
+	Sphere *clone() {
+		return new Sphere(*this);
+	}
+
 	inline double getR() const {
 		return r;
 	}

@@ -16,6 +16,10 @@ public:
 	s(c.s)
 	{
 	}
+
+	Cube *clone() {
+		return new Cube(*this);
+	}
 	inline double getS() {
 		return s;
 	}

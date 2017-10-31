@@ -19,6 +19,10 @@ public:
 		y(v.y),
 		z(v.z){
 	}
+
+	Vector3D *clone() {
+		return new Vector3D(*this);
+	}
 	inline double getX() {
 		return x;
 	}

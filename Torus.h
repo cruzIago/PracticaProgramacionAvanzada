@@ -15,6 +15,9 @@ class Torus :public Solid {
 			iradius(t.iradius),
 			eradius(t.eradius)
 		{}
+		Torus *clone() {
+			return new Torus(*this);
+		}
 		void setIradius(double d) {
 			iradius = d;
 		}

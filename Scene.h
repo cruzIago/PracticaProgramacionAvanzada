@@ -12,7 +12,15 @@ class Scene {
 private:
 	vector<Solid*> solids;
 public:
-
+	Scene();
+	virtual ~Scene();
+	Scene(const Scene&es) {
+		for (Solid *s : es.solids) {
+			Solid *s0 = s->clone();
+			solids.push_back(s0);
+		}
+	}
+	
 	vector<Solid*> getSolids() const {
 		return solids;
 	}

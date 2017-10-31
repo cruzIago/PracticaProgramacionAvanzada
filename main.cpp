@@ -6,7 +6,8 @@
 #include "Sphere.h"
 #include "Torus.h";
 #include <vector>
-#include "scene.h"
+#include "Scene.h"
+#include "Solid.h"
 using namespace std;
 
 
@@ -117,7 +118,7 @@ int main(int argc, char** argv) {
 	Sphere *f;
 	Torus *tr;
 	Vector3D v;
-	cout << v << endl;
+	//cout << v << endl;
 	c = new Cube();
 
 	c->setPos(Vector3D(0,1,0));
@@ -191,6 +192,8 @@ int main(int argc, char** argv) {
 	e[1].col.z = 1;
 	e[1].r = 0.6;
 	*/
+
+	
 	glutInit(&argc, argv);
 	glutInitDisplayMode(/*GLUT_DOUBLE |*/ GLUT_RGBA | GLUT_DEPTH);
 	glutInitWindowSize(1280, 720);                    // window size

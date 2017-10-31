@@ -9,6 +9,12 @@ class Torus :public Solid {
 		double iradius;
 		double eradius;
 	public:
+		Torus(double x = 0, double y = 0, double z = 0) :Solid(x,y,z),iradius(0.1),eradius(0.5){}
+		Torus(const Torus &t) :
+		Solid(t),
+			iradius(t.iradius),
+			eradius(t.eradius)
+		{}
 		void setIradius(double d) {
 			iradius = d;
 		}

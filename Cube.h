@@ -10,6 +10,12 @@ private:
 	double s;
 public:
 
+	Cube(double x=0, double y=0, double z=0) :Solid(x, y, z), s(0.1) {}
+	Cube(const Cube&c):
+	Solid(c),
+	s(c.s)
+	{
+	}
 	inline double getS() {
 		return s;
 	}

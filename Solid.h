@@ -9,6 +9,16 @@ private:
 	Vector3D fur;
 	double mas;
 public:
+
+	Solid(double x=0, double y=0, double z=0) :pos(x, y, z), vel(0, 0, 0), col(1, 1, 1), fur(0, 0, 0), mas(0) {}
+	Solid(const Solid&s) :
+		pos (s.pos),
+		vel (s.vel),
+		col	(s.col),
+		fur (s.fur),
+		mas(s.mas)
+	{}
+	//virtual Solid();
 	void setPos(Vector3D p) {
 		pos = p;
 	}

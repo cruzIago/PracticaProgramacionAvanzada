@@ -13,7 +13,7 @@ private:
 	vector<Solid*> solids;
 public:
 
-	vector<Solid*> getSolids() {
+	vector<Solid*> getSolids() const {
 		return solids;
 	}
 
@@ -40,3 +40,10 @@ public:
 	}
 
 };
+
+inline ostream &operator<<(ostream &os, const Scene &e) {
+	for (Solid *s : e.getSolids()){
+		os << *s << endl;
+	}
+	return os;
+}

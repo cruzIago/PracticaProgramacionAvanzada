@@ -8,8 +8,12 @@ class Sphere:public Solid {
 private:
 	double r;
 public:
-
-	inline double getR() {
+	Sphere(double x=0, double y=0, double z=0):Solid(x, y, z), r(0.2) {}
+	Sphere(const Sphere&e) :
+		Solid(e),
+		r(e.r)
+	{}
+	inline double getR() const {
 		return r;
 	}
 	inline void setR(double d) {
@@ -18,5 +22,9 @@ public:
 	void render();
 	//void update(double dt);
 };
+
+inline ostream &operator<<(ostream &os, const Sphere &s) {
+	os  << s.getR() << endl;
+}
 
 #endif

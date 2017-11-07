@@ -12,7 +12,7 @@ void Solid::update(double dt) {
 	Vector3D g(0, -0.00098f, 0);
 	Vector3D a = fur / mas;
 	vel = vel + a*dt;
-	vel = vel + g*dt;
+	//vel = vel + g*dt;
 	pos = pos + vel*dt;
 	if (abs(pos.getZ()) > 2) {
 		double vz;

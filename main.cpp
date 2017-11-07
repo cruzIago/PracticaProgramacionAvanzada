@@ -8,6 +8,8 @@
 #include <vector>
 #include "Scene.h"
 #include "Solid.h"
+#include "Time.h"
+#include "Combined.h"
 using namespace std;
 
 
@@ -118,11 +120,27 @@ double getRandom(double max, double min = 0) {
 	return min + (double)internalRandom / 1000 * numero;
 }
 int main(int argc, char** argv) {
-	
+	srand(time(NULL));//seed random, para generar el pseudo random
 	Cube *c;
 	Sphere *f;
 	Torus *tr;
 	Vector3D v;
+	Combined *cmb;
+	cmb = new Combined();
+	f = new Sphere();
+	f->setPos(Vector3D(2, 2.5, 0));
+	f->setCol(Vector3D(0, 1, 0));
+	f->setR(1.5);
+	f->setMas(2);
+	c = new Cube();
+	c->setPos(Vector3D(2, 0, 0));
+	c->setCol(Vector3D(1, 0.25, 0.10));
+	c->setS(0.6);
+	c->setMas(2);
+	cmb->add(f);
+	cmb->add(c);
+	e.add(cmb);
+
 	//cout << v << endl;
 	c = new Cube();
 
@@ -152,9 +170,9 @@ int main(int argc, char** argv) {
 
 		for (double j = -3; j < 3; j++) {
 			c = new Cube();
-			c->setPos(Vector3D(i, 1, j));
+			c->setPos(Vector3D(getRandom(4,-4), getRandom(2,1), getRandom(4,-4)));
 
-			c->setCol(Vector3D(1, 0, 0));
+			c->setCol(Vector3D(getRandom(1), getRandom(1), getRandom(1)));
 
 			c->setVel(Vector3D(0, 0, 0));
 

@@ -59,7 +59,7 @@ public:
 
 	virtual void render() = 0;//Esto obliga a los hijos a hacer un metodo render en los hijos
 
-	void update(double dt);
+	virtual void update(double dt); //Virtual permite que depende del tipo de objeto que se use con update, se determine cual usar si lo obtiene
 
 	friend ostream &operator<<(ostream &os, const Solid &s);
 };

@@ -8,26 +8,28 @@
 using namespace std;
 
 
-class Scene {
+class Combined:public Solid {
 private:
 	vector<Solid*> solids;
 public:
-	Scene();
-	virtual ~Scene() {
+	Combined();
+	virtual ~Combined() {
 		for (Solid *s : solids) {
 			delete s;
 		}
 		solids.clear();
 	}
-	Scene(const Scene&es) {
+
+	Combined(const Combined&es):solids() {
 		for (Solid *s : es.solids) {
 			Solid *s0 = s->clone();
 			solids.push_back(s0);
 		}
 	}
-	Scene *clone() {
-		return new Scene(*this);
+	Combined *clone() {
+		return new Combined(*this);
 	}
+		
 	vector<Solid*> getSolids() const {
 		return solids;
 	}
@@ -41,15 +43,18 @@ public:
 	}
 
 	void render() {
+		glPushMatrix();
+		glTranslated(getPos().getX(), getPos().getY(), getPos().getZ());
 		for (Solid* s : solids) {
 			s->render();
 		}
+		glPopMatrix();
 	}
 
 	void update(double dt) {
 		/*
 		for (Solid* s : solids) {
-			s->update(dt);
+		s->update(dt);
 		}*/
 		//Añadimos iterador para que el for each lo recorra de manera especifica
 		//Se podría decir que es el for each con ciertas especificaciones
@@ -57,13 +62,13 @@ public:
 			Solid *s = *i;
 			s->update(dt);
 		}
-	
+
 	}
 
 };
 
-inline ostream &operator<<(ostream &os, const Scene &e) {
-	for (Solid *s : e.getSolids()){
+inline ostream &operator<<(ostream &os, const Combined &e) {
+	for (Solid *s : e.getSolids()) {
 		os << *s << endl;
 	}
 	return os;

@@ -5,7 +5,3 @@
 Scene::Scene() {
 
 }
-
-Scene::~Scene() {
-
-}

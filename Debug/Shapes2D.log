@@ -1,10 +1,4 @@
-﻿  Scene.cpp
-c:\users\rayug\desktop\clase\2ndoaño\dev\visual-studio-c++\badprogtutorial\shapes2d\scene.h(2): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
-c:\users\rayug\desktop\clase\2ndoaño\dev\visual-studio-c++\badprogtutorial\shapes2d\scene.h(3): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
-c:\users\rayug\desktop\clase\2ndoaño\dev\visual-studio-c++\badprogtutorial\shapes2d\sphere.h(4): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
-c:\users\rayug\desktop\clase\2ndoaño\dev\visual-studio-c++\badprogtutorial\shapes2d\scene.h(4): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
-c:\users\rayug\desktop\clase\2ndoaño\dev\visual-studio-c++\badprogtutorial\shapes2d\scene.h(6): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
-  main.cpp
+﻿  main.cpp
 c:\users\rayug\desktop\clase\2ndoaño\dev\visual-studio-c++\badprogtutorial\shapes2d\sphere.h(4): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
 c:\users\rayug\desktop\clase\2ndoaño\dev\visual-studio-c++\badprogtutorial\shapes2d\main.cpp(7): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
 c:\users\rayug\desktop\clase\2ndoaño\dev\visual-studio-c++\badprogtutorial\shapes2d\scene.h(2): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
@@ -15,11 +9,5 @@ c:\users\rayug\desktop\clase\2ndoaño\dev\visual-studio-c++\badprogtutorial\shap
 c:\users\rayug\desktop\clase\2ndoaño\dev\visual-studio-c++\badprogtutorial\shapes2d\main.cpp(82): warning C4305: '+=': truncamiento de 'double' a 'float'
 c:\users\rayug\desktop\clase\2ndoaño\dev\visual-studio-c++\badprogtutorial\shapes2d\main.cpp(86): warning C4305: '-=': truncamiento de 'double' a 'float'
 c:\users\rayug\desktop\clase\2ndoaño\dev\visual-studio-c++\badprogtutorial\shapes2d\main.cpp(118): warning C4101: 'f': variable local sin referencia
-  Generando código...
-  Omitiendo... (no se detectaron cambios relevantes)
-  Torus.cpp
-  Sphere.cpp
-  Solid.cpp
-  Cube.cpp
   Shapes2D.vcxproj -> C:\Users\rayug\Desktop\Clase\2ndoAño\dev\visual-studio-c++\BadprogTutorial\Debug\Shapes2D.exe
   Shapes2D.vcxproj -> C:\Users\rayug\Desktop\Clase\2ndoAño\dev\visual-studio-c++\BadprogTutorial\Debug\Shapes2D.pdb (Partial PDB)

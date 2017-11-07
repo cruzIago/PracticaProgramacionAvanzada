@@ -13,7 +13,12 @@ private:
 	vector<Solid*> solids;
 public:
 	Scene();
-	virtual ~Scene();
+	virtual ~Scene() {
+		for (Solid *s : solids) {
+			delete s;
+		}
+		solids.clear();
+	}
 	Scene(const Scene&es) {
 		for (Solid *s : es.solids) {
 			Solid *s0 = s->clone();
@@ -40,8 +45,14 @@ public:
 	}
 
 	void update(double dt) {
-
+		/*
 		for (Solid* s : solids) {
+			s->update(dt);
+		}*/
+		//Añadimos iterador para que el for each lo recorra de manera especifica
+		//Se podría decir que es el for each con ciertas especificaciones
+		for (vector<Solid * >::iterator i = solids.begin(); i < solids.end(); i++) {
+			Solid *s = *i;
 			s->update(dt);
 		}
 	

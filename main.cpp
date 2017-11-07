@@ -112,6 +112,11 @@ void mousePressed() {
 void mouseMoved() {
 
 }
+double getRandom(double max, double min = 0) {
+	double numero = max - min;
+	int internalRandom = rand() % 1000;
+	return min + (double)internalRandom / 1000 * numero;
+}
 int main(int argc, char** argv) {
 	
 	Cube *c;
@@ -138,8 +143,8 @@ int main(int argc, char** argv) {
 	tr->setPos(Vector3D(0, 1, 0));
 	tr->setCol(Vector3D(0, 2, 0));
 	tr->setVel(Vector3D(0, 0, 0));
-	tr->setIradius(1);
-	tr->setEradius(2);
+	tr->setIradius(0.1);
+	tr->setEradius(0.2);
 	tr->setMas(1);
 	e.add(tr);
 	

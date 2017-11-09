@@ -1,6 +1,9 @@
 #include <GL\glew.h>
 #include <GL\freeglut.h>
 #include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream>
 #include "Vector3D.h"
 #include "Cube.h"
 #include "Sphere.h"
@@ -119,6 +122,7 @@ double getRandom(double max, double min = 0) {
 	int internalRandom = rand() % 1000;
 	return min + (double)internalRandom / 1000 * numero;
 }
+//triangulo, recibe 3 puntos
 int main(int argc, char** argv) {
 	srand(time(NULL));//seed random, para generar el pseudo random
 	Cube *c;
@@ -140,6 +144,13 @@ int main(int argc, char** argv) {
 	cmb->add(f);
 	cmb->add(c);
 	e.add(cmb);
+
+	Combined *arbol0;
+	for (int i = 0; i < getRandom(10); i++) {
+		arbol0 = cmb->clone();
+		arbol0->setPos(Vector3D(getRandom(4, -4),0,getRandom(4,-4 )));
+		e.add(arbol0);
+	}	
 
 	//cout << v << endl;
 	c = new Cube();
@@ -186,35 +197,35 @@ int main(int argc, char** argv) {
 		}
 
 	}
+	//Prueba de ficheros
+	ofstream myFile("example.txt");
+	if (myFile.is_open()) {
+		myFile << "Esto abre\n";
+		myFile << "incluso varias lineas\n";
+		myFile.close();
+	}
+	else {
+		cout << "no se puede abrir el archivo";
+	}
+	string line;
+	ifstream myFich("example.txt");
+	if (myFich.is_open()) {
+		while (getline(myFich, line)) {
+			cout << line << '\n';
+		}
+		myFich.close();
+	}
+	else {
+		cout << "No se puede abrir el fichero";
+	}
 
-	/*
-	c[1].pos.x = 5;
-	c[1].pos.y = 1;
-	c[1].pos.z = 1;
-	c[1].col.x = 1;
-	c[1].col.y = 1;
-	c[1].col.z = 0;
-	c[1].s = 0.2;
+	string str;
+	istringstream ses(line);
+	vector<string> words;
+	while (ses >> str) {
+		words.push_back(str);
+	}
 
-	e[0].pos.x = -1;
-	e[0].pos.y = 1;
-	e[0].getPost().setZ();
-	e[0].col.x = 1;
-	e[0].col.y = 1;
-	e[0].col.z = 0;
-	e[0].vel.x = -0.3;
-	e[0].vel.y = 0;
-	e[0].vel.z = -0.1;
-	e[0].r = 0.3;
-
-	e[1].pos.x = -2;
-	e[1].pos.y = 1;
-	e[1].pos.z = 0;
-	e[1].col.x = 0;
-	e[1].col.y = 0;
-	e[1].col.z = 1;
-	e[1].r = 0.6;
-	*/
 
 	
 	glutInit(&argc, argv);

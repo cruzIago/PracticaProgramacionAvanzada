@@ -9,8 +9,8 @@ using namespace std;
 
 void Solid::update(double dt) {
 
-	Vector3D g(0, -0.00098f, 0);
-	Vector3D a = fur / mas;
+	Vector3Dd g(0, -0.00098f, 0);
+	Vector3Dd a = fur / mas;
 	vel = vel + a*dt;
 	//vel = vel + g*dt;
 	pos = pos + vel*dt;

@@ -19,6 +19,8 @@ public:
 		}
 		solids.clear();
 	}
+	//El & permite recibir como parametros las variables y realizar operaciones directamente sobre
+	//Los espacios de memoria (Guia de estudio 3, 2.2 referencias)
 	Scene(const Scene&es) {
 		for (Solid *s : es.solids) {
 			Solid *s0 = s->clone();

@@ -21,7 +21,7 @@ float t = 0;
 float dt = 0.1;
 float oDist = -3;
 
-Vector3D g; //Declaramos la gravedad
+Vector3Dd g; //Declaramos la gravedad
 
 Scene e;
 /**
@@ -128,17 +128,17 @@ int main(int argc, char** argv) {
 	Cube *c;
 	Sphere *f;
 	Torus *tr;
-	Vector3D v;
+	Vector3Dd v;
 	Combined *cmb;
 	cmb = new Combined();
 	f = new Sphere();
-	f->setPos(Vector3D(2, 2.5, 0));
-	f->setCol(Vector3D(0, 1, 0));
+	f->setPos(Vector3Dd(2, 2.5, 0));
+	f->setCol(Vector3Dd(0, 1, 0));
 	f->setR(1.5);
 	f->setMas(2);
 	c = new Cube();
-	c->setPos(Vector3D(2, 0, 0));
-	c->setCol(Vector3D(1, 0.25, 0.10));
+	c->setPos(Vector3Dd(2, 0, 0));
+	c->setCol(Vector3Dd(1, 0.25, 0.10));
 	c->setS(0.6);
 	c->setMas(2);
 	cmb->add(f);
@@ -148,18 +148,18 @@ int main(int argc, char** argv) {
 	Combined *arbol0;
 	for (int i = 0; i < getRandom(10); i++) {
 		arbol0 = cmb->clone();
-		arbol0->setPos(Vector3D(getRandom(4, -4),0,getRandom(4,-4 )));
+		arbol0->setPos(Vector3Dd(getRandom(4, -4),0,getRandom(4,-4 )));
 		e.add(arbol0);
 	}	
 
 	//cout << v << endl;
 	c = new Cube();
 
-	c->setPos(Vector3D(0,1,0));
+	c->setPos(Vector3Dd(0,1,0));
 
-	c->setCol(Vector3D(1,0,0));
+	c->setCol(Vector3Dd(1,0,0));
 	
-	c->setVel(Vector3D(0,0,0));
+	c->setVel(Vector3Dd(0,0,0));
 
 	c->setS(0.5);
 
@@ -169,9 +169,9 @@ int main(int argc, char** argv) {
 
 	tr = new Torus();
 
-	tr->setPos(Vector3D(0, 1, 0));
-	tr->setCol(Vector3D(0, 2, 0));
-	tr->setVel(Vector3D(0, 0, 0));
+	tr->setPos(Vector3Dd(0, 1, 0));
+	tr->setCol(Vector3Dd(0, 2, 0));
+	tr->setVel(Vector3Dd(0, 0, 0));
 	tr->setIradius(0.1);
 	tr->setEradius(0.2);
 	tr->setMas(1);
@@ -181,15 +181,15 @@ int main(int argc, char** argv) {
 
 		for (double j = -3; j < 3; j++) {
 			c = new Cube();
-			c->setPos(Vector3D(getRandom(4,-4), getRandom(2,1), getRandom(4,-4)));
+			c->setPos(Vector3Dd(getRandom(4,-4), getRandom(2,1), getRandom(4,-4)));
 
-			c->setCol(Vector3D(getRandom(1), getRandom(1), getRandom(1)));
+			c->setCol(Vector3Dd(getRandom(1), getRandom(1), getRandom(1)));
 
-			c->setVel(Vector3D(0, 0, 0));
+			c->setVel(Vector3Dd(0, 0, 0));
 
 			c->setS(0.5);
 
-			c->setFur(Vector3D(0, -0.000098, 0));
+			c->setFur(Vector3Dd(0, -0.000098, 0));
 			c->setMas(1);
 
 			e.add(c);
@@ -197,6 +197,8 @@ int main(int argc, char** argv) {
 		}
 
 	}
+
+	/*
 	//Prueba de ficheros
 	ofstream myFile("example.txt");
 	if (myFile.is_open()) {
@@ -226,8 +228,20 @@ int main(int argc, char** argv) {
 		words.push_back(str);
 	}
 
-
-	
+	//Lectura de ficheros binarios
+	streampos tam;
+	char * memo;
+	ifstream fichero("", ios::in | ios::binary | ios::ate);
+	if (fichero.is_open) {
+		tam = fichero.tellg();//Posicion del puntero en el fichero
+		memo = new char[tam];//Asignamos el tamaño a una variable
+		fichero.seekg(0, ios::beg);//ASignamos posicion del puntero
+		fichero.read(memo, tam);//Extrae tam caracteres en la variable memo
+		fichero.close();
+		cout << "todo en memoria";
+		delete [] memo;
+	}
+	*/
 	glutInit(&argc, argv);
 	glutInitDisplayMode(/*GLUT_DOUBLE |*/ GLUT_RGBA | GLUT_DEPTH);
 	glutInitWindowSize(1280, 720);                    // window size

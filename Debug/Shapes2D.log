@@ -1,17 +1,3 @@
-﻿  main.cpp
-c:\users\rayug\desktop\clase\2ndoaño\dev\visual-studio-c++\badprogtutorial\shapes2d\sphere.h(4): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
-c:\users\rayug\desktop\clase\2ndoaño\dev\visual-studio-c++\badprogtutorial\shapes2d\main.cpp(9): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
-c:\users\rayug\desktop\clase\2ndoaño\dev\visual-studio-c++\badprogtutorial\shapes2d\scene.h(2): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
-c:\users\rayug\desktop\clase\2ndoaño\dev\visual-studio-c++\badprogtutorial\shapes2d\scene.h(3): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
-c:\users\rayug\desktop\clase\2ndoaño\dev\visual-studio-c++\badprogtutorial\shapes2d\scene.h(4): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
-c:\users\rayug\desktop\clase\2ndoaño\dev\visual-studio-c++\badprogtutorial\shapes2d\scene.h(6): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
-c:\users\rayug\desktop\clase\2ndoaño\dev\visual-studio-c++\badprogtutorial\shapes2d\combined.h(2): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
-c:\users\rayug\desktop\clase\2ndoaño\dev\visual-studio-c++\badprogtutorial\shapes2d\combined.h(3): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
-c:\users\rayug\desktop\clase\2ndoaño\dev\visual-studio-c++\badprogtutorial\shapes2d\combined.h(4): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
-c:\users\rayug\desktop\clase\2ndoaño\dev\visual-studio-c++\badprogtutorial\shapes2d\combined.h(6): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
-c:\users\rayug\desktop\clase\2ndoaño\dev\visual-studio-c++\badprogtutorial\shapes2d\main.cpp(20): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
-c:\users\rayug\desktop\clase\2ndoaño\dev\visual-studio-c++\badprogtutorial\shapes2d\main.cpp(86): warning C4305: '+=': truncamiento de 'double' a 'float'
-c:\users\rayug\desktop\clase\2ndoaño\dev\visual-studio-c++\badprogtutorial\shapes2d\main.cpp(90): warning C4305: '-=': truncamiento de 'double' a 'float'
-c:\users\rayug\desktop\clase\2ndoaño\dev\visual-studio-c++\badprogtutorial\shapes2d\main.cpp(126): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+﻿  Solid.cpp
   Shapes2D.vcxproj -> C:\Users\rayug\Desktop\Clase\2ndoAño\dev\visual-studio-c++\BadprogTutorial\Debug\Shapes2D.exe
   Shapes2D.vcxproj -> C:\Users\rayug\Desktop\Clase\2ndoAño\dev\visual-studio-c++\BadprogTutorial\Debug\Shapes2D.pdb (Partial PDB)

@@ -125,6 +125,7 @@
     <ClCompile Include="Solid.cpp" />
     <ClCompile Include="Sphere.cpp" />
     <ClCompile Include="Torus.cpp" />
+    <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="Vector3D.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -134,6 +135,7 @@
     <ClInclude Include="Solid.h" />
     <ClInclude Include="Sphere.h" />
     <ClInclude Include="Torus.h" />
+    <ClInclude Include="Triangle.h" />
     <ClInclude Include="Vector3D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -3,10 +3,10 @@
 
 class Solid {
 private:
-	Vector3D pos;
-	Vector3D vel;
-	Vector3D col;
-	Vector3D fur;
+	Vector3Dd pos;
+	Vector3Dd vel;
+	Vector3Dd col;
+	Vector3Dd fur;
 	double mas;
 public:
 
@@ -20,19 +20,19 @@ public:
 	{}
 	//virtual ~Solid(); //Se llama automaticamente cuando una variable deja de ser necesaria (virtual ~ss)
 	virtual Solid *clone() = 0;
-	void setPos(Vector3D p) {
+	void setPos(Vector3Dd p) {
 		pos = p;
 	}
 
-	void setVel(Vector3D v) {
+	void setVel(Vector3Dd v) {
 		vel = v;
 	}
 
-	void setCol(Vector3D c) {
+	void setCol(Vector3Dd c) {
 		col = c;
 	}
 	
-	void setFur(Vector3D f) {
+	void setFur(Vector3Dd f) {
 		fur = f;
 	}
 
@@ -40,16 +40,16 @@ public:
 		mas = m;
 	}
 
-	Vector3D getPos() {
+	Vector3Dd getPos() {
 		return pos;
 	}
-	Vector3D getVel() {
+	Vector3Dd getVel() {
 		return vel;
 	}
-	Vector3D getCol() {
+	Vector3Dd getCol() {
 		return col;
 	}
-	Vector3D getFur() {
+	Vector3Dd getFur() {
 		return fur;
 	}
 

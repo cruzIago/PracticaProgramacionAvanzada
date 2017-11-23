@@ -1,6 +1,7 @@
 #include "Vector3D.h"
 
-
+/*
+//Utilizamos el template entonces el linkador no lo ve
 Vector3D Vector3D::operator+(Vector3D v2) {
 	Vector3D vuelta;
 	vuelta.x = x + v2.x;
@@ -29,6 +30,6 @@ Vector3D Vector3D::operator/(double d) {
 	vuelta.y = y / d;
 	vuelta.z = z / d;
 	return vuelta;
-}
+}*/
 
 
